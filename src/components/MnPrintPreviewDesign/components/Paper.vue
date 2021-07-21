@@ -19,12 +19,12 @@
 </template>
 
 <script>
-  import TitleContainer from './TitleContainer';
-  import ReceiptContainer from './ReceiptContainer';
+  import TitleContainer from './TitleContainer.vue';
+  import ReceiptContainer from './ReceiptContainer.vue';
   import HorizontalLineBar from './HorizontalLineBar';
-  import VerticalLineBar from './VerticalLineBar';
-  import DataBindingModal from './DataBindingModal';
-  import DataSourceContainer from './DataSourceContainer';
+  import VerticalLineBar from './VerticalLineBar.js';
+  // import DataBindingModal from './DataBindingModal.vue';
+  import DataSourceContainer from './DataSourceContainer.vue';
   import SimpleEncoder from '../utils/SimpleEncoder';
   export default {
     name: "Paper",

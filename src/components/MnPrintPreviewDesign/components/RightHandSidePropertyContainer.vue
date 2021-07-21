@@ -38,7 +38,7 @@
 
 <script>
   import { setStyles } from '../utils/CSSUtils'
-  import Selector from './Selector';
+  import Selector from './Selector.vue';
 
   export default {
     name: "RightHandSidePropertyContainer",

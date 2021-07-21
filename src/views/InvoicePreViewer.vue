@@ -6,7 +6,7 @@
 
 <script>
   import Vue from 'vue';
-  import Paper from '@components/MnPrintPreview/Paper';
+  import Paper from '../components/MnPrintPreview/Paper.vue';
 
   export default {
     name: "MnInvoicePreViewer",

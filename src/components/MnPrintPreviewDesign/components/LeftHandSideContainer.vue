@@ -13,7 +13,7 @@
 
 <script>
 
-  import ComponentItem from './ComponentItem';
+  import ComponentItem from './ComponentItem.vue';
   export default {
     name: "LeftHandSideContainer",
     props: {

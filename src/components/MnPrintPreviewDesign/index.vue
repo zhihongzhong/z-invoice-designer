@@ -24,12 +24,12 @@
 </template>
 
 <script>
-  import LeftHandSideContainer from './components/LeftHandSideContainer';
-  import RightHandSideContainer from './components/RightHandSidePropertyContainer';
-  import DataBindingModal from './components/DataBindingModal';
-  import ToolBar from './components/ToolBar';
-  import Paper from './components/Paper';
-  import PaperSizeModal from './components/PaperSizeModal';
+  import LeftHandSideContainer from './components/LeftHandSideContainer.vue';
+  import RightHandSideContainer from './components/RightHandSidePropertyContainer.vue';
+  import DataBindingModal from './components/DataBindingModal.vue';
+  import ToolBar from './components/ToolBar.vue';
+  import Paper from './components/Paper.vue';
+  import PaperSizeModal from './components/PaperSizeModal.vue';
 
   import {
     createAbsoluteStyle,
