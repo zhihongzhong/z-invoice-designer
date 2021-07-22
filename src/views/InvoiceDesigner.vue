@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import MnPrintPreviewDesign from '@components/MnPrintPreviewDesign/index';
+  import MnPrintPreviewDesign from '../components/MnPrintPreviewDesign/index.vue';
   import Vue from 'vue';
 
   export default {

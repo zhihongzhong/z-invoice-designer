@@ -1,23 +1,18 @@
+import InvoicePreViewer from "../views/InvoicePreViewer.vue";
+import InvoiceDesigner from "../views/InvoiceDesigner.vue";
 
-import InvoiceDesigner from '@views/InvoiceDesigner';
-import InvoicePreViewer from '@views/InvoicePreViewer';
-
-export default  [
+export default [
+  { path: "/", redirect: "/invoiceDesign" },
   {
-    path: '/invoiceDesign',
+    path: "/invoiceDesign",
     component: InvoiceDesigner,
   },
   {
-    path: '/invoicePreview',
-    component: InvoicePreViewer
+    path: "/invoicePreview",
+    component: InvoicePreViewer,
   },
 ];
 
+export const protectedRouteConfig = [];
 
-export const protectedRouteConfig = [
-];
-
-
-export const cacheRuleMap = {
-}
-
+export const cacheRuleMap = {};
