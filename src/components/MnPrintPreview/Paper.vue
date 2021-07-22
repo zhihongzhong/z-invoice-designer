@@ -12,9 +12,9 @@
 </template>
 
 <script>
-  import TitleContainer from './components/TitleContainer';
-  import ReceiptContainer from './components/ReceiptContainer';
-  import DataSourceContainer from './components/DataSourceContainer';
+  import TitleContainer from './components/TitleContainer.vue';
+  import ReceiptContainer from './components/ReceiptContainer.vue';
+  import DataSourceContainer from './components/DataSourceContainer.vue';
 
   export default {
     name: "Paper",
