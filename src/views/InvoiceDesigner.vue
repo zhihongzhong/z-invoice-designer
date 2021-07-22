@@ -23,6 +23,9 @@
         const treeNodes = Vue.ls.get('treeNodes');
         return Promise.resolve({ treeNodes });
       }
+    },
+    created() {
+      
     }
   }
 </script>
@@ -31,5 +34,12 @@
   .mn-invoice-designer-root {
     width: 100vw;
     height: 100vh;
+  }
+
+
+  @media screen and (max-width: 1080px) {
+    .mn-invoice-designer-root {
+      display: none;
+    }
   }
 </style>
