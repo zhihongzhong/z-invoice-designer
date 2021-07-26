@@ -30,6 +30,8 @@ Once you have done the design, and pressed save button, you can see its output h
 9. Preview it!
 
 
-## Development 
+## Install 
+To install the project, you should install `pnpm` first.
 
-To install project, you should install `pnpm` first. 
+## Development 
+None
