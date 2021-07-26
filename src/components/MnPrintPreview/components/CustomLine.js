@@ -1,4 +1,4 @@
-import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil'
+import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
 import './CustomLine.less';
 
 export default {

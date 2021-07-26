@@ -28,12 +28,12 @@
 </template>
 
 <script>
-  import ContainerMixin from '../mixins/ContainerMixin';
-  import DynamicComponent from './DynamicComponent';
-  import { createTitleComponentProperties, createDefaultContainerStyle } from '../utils/ComponentUtil';
-  import { copyObj } from '../utils/ObjectUtil';
-  import SimpleEncoder from '../utils/SimpleEncoder'
-  import { style2object } from '../utils/ComponentUtil'
+  import ContainerMixin from '../mixins/ContainerMixin.js';
+  import DynamicComponent from './DynamicComponent.js';
+  import { createTitleComponentProperties, createDefaultContainerStyle } from '../utils/ComponentUtil.js';
+  import { copyObj } from '../utils/ObjectUtil.js';
+  import SimpleEncoder from '../utils/SimpleEncoder.js';
+  import { style2object } from '../utils/ComponentUtil.js';
 
   export default {
     name: "TitleContainer",

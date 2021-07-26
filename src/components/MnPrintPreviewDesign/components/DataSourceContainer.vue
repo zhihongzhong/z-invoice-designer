@@ -16,10 +16,10 @@
   // title: String
   // dataIndex: String
   // authority: String
-  import ContainerMixin from '../mixins/ContainerMixin';
-  import { createDefaultContainerStyle, style2object } from '../utils/ComponentUtil'
-  import TableComponent from './TableComponent';
-  import { copyObj } from '../utils/ObjectUtil'
+  import ContainerMixin from '../mixins/ContainerMixin.js';
+  import { createDefaultContainerStyle, style2object } from '../utils/ComponentUtil.js'
+  import TableComponent from './TableComponent.js';
+  import { copyObj } from '../utils/ObjectUtil.js';
   export default {
     name: "DataSourceContainer",
 

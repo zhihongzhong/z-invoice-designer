@@ -1,6 +1,6 @@
-import { rectIn } from '../utils/GraphicUtils'
-import { array2object, style2object } from '../utils/ComponentUtil'
-import DraggableMixin from '../mixins/DraggableMixin'
+import { rectIn } from '../utils/GraphicUtils.js';
+import { array2object, style2object } from '../utils/ComponentUtil.js';
+import DraggableMixin from '../mixins/DraggableMixin.js';
 
 import './LabelComponent.less';
 

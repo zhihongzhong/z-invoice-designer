@@ -276,7 +276,7 @@
         bottom: 0;
         width: 100%;
         background: white;
-        
+
         .button-wrap {
           width: 100%;
           display: flex;

@@ -13,15 +13,15 @@ export default {
     dataBinding: {
       type: String,
       default: ''
-    }
-  },
-  inject: {
+    },
     dataSource: {
-      default: null
+      type: Object,
+      default: ()=> ({})
     }
   },
   computed: {
     rows() {
+      if(!this.dataSource || !this.dataSource[this.dataBinding]) return [];
       const actualData = this.dataSource[this.dataBinding].map(row=> {
         return this.columns.map(column=> {
           return row[column.dataIndex];
@@ -43,16 +43,34 @@ export default {
       );
     },
     createTD(createElement, columns) {
-      return columns.map(column=>
-        createElement('td',
-          {
-            domProps: {
-              innerHTML: column
-            }
-          },
-          [
-          
-          ])
+      return columns.map(column=> {
+        const c = (typeof column === 'string') ? column : "";
+        const splits = c.split('||');
+        if(splits.length > 1) {
+          return createElement('td',
+            {
+            },
+            [
+              this.createDIV(createElement, splits)
+            ])
+        } else {
+          return createElement('td',
+            {
+              domProps: {
+                innerHTML: column
+              }
+          })
+        }
+      }
+      );
+    },
+    createDIV(createElement, array) {
+      return array.map(text=>
+        createElement('div', {
+          domProps: {
+            innerHTML: text
+          }
+        })
       );
     }
   },

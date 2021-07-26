@@ -1,6 +1,6 @@
-import DraggableMixin from '../mixins/DraggableMixin'
-import { style2object } from '../utils/ComponentUtil'
-import { rectIn } from '../utils/GraphicUtils'
+import DraggableMixin from '../mixins/DraggableMixin.js';
+import { style2object } from '../utils/ComponentUtil.js';
+import { rectIn } from '../utils/GraphicUtils.js';
 import './CustomLine.less';
 
 export default {

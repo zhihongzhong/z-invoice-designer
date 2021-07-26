@@ -37,7 +37,10 @@
     createLabelComponentAttributes,
     createAttributesWithDataSourceOfItsValue,
     createLabelComponentAttributesWIthDataSourceAndAuthorityOfItsValue,
-    createLabelComponentAttributesWithDataSourceOfItsValue, createDefaultContainerStyle
+    createLabelComponentAttributesWithDataSourceOfItsValue,
+    createDefaultContainerStyle,
+    createTitleComponentAttributes,
+    createDataSourceTitleComponentAttributes
   } from './utils/ComponentUtil'
 
   import { printById } from './utils/PrintUtil';
@@ -154,21 +157,21 @@
                 nameForShow: 'h5',
                 componentType: 2,
                 styles: createAbsoluteStyle(),
-                attributes: createAttributes('点击更改名称')
+                attributes: createTitleComponentAttributes('点击更改名称')
               },
               {
                 tagName: 'h4',
                 nameForShow: 'h4',
                 componentType: 2,
                 styles: createAbsoluteStyle(),
-                attributes: createAttributes('点击更改名称')
+                attributes: createTitleComponentAttributes('点击更改名称')
               },
               {
                 tagName: 'h3',
                 nameForShow: 'h3',
                 componentType: 2,
                 styles: createAbsoluteStyle(),
-                attributes: createAttributes('点击更改名称')
+                attributes: createTitleComponentAttributes('点击更改名称')
               },
             ],
             componentType: 1
@@ -183,14 +186,14 @@
                 nameForShow: 'h5',
                 componentType: 2,
                 styles: createAbsoluteStyle(),
-                attributes: createAttributesWithDataSourceOfItsValue('点击选择数据源')
+                attributes: createDataSourceTitleComponentAttributes('点击选择数据源')
               },
               {
                 tagName: 'h3',
                 nameForShow: 'h3',
                 componentType: 2,
                 styles: createAbsoluteStyle(),
-                attributes: createAttributesWithDataSourceOfItsValue('点击选择数据源')
+                attributes: createDataSourceTitleComponentAttributes('点击选择数据源')
               }
             ]
           },

@@ -1,7 +1,7 @@
 
 import './HorizontalLineBar.less';
-import { createHorizontalLineStyle } from '../utils/ComponentUtil'
-import SimpleEncoder from '../utils/SimpleEncoder'
+import { createHorizontalLineStyle } from '../utils/ComponentUtil.js';
+import SimpleEncoder from '../utils/SimpleEncoder.js';
 
 export default {
   name: 'HorizontalLineBar',

@@ -207,6 +207,32 @@ export function createAttributes(value) {
   ];
 }
 
+export function createTitleComponentAttributes(value) {
+  const attributes = createAttributes(value);
+  attributes.push({
+    name: 'prefix',
+    value: ''
+  });
+  attributes.push({
+    name: 'suffix',
+    value: ''
+  });
+  return attributes;
+}
+
+export function createDataSourceTitleComponentAttributes(value) {
+  const attributes = createAttributesWithDataSourceOfItsValue(value);
+  attributes.push({
+    name: 'prefix',
+    value: ''
+  });
+  attributes.push({
+    name: 'suffix',
+    value: ''
+  });
+  return attributes;
+}
+
 export function createAttributesWithDataSourceOfItsValue(value) {
   return [
     {

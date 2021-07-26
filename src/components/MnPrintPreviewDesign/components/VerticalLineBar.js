@@ -1,7 +1,7 @@
 
 import './VerticalLineBar.less';
-import { createVerticalLineStyle } from '../utils/ComponentUtil';
-import SimpleEncoder from '../utils/SimpleEncoder'
+import { createVerticalLineStyle } from '../utils/ComponentUtil.js';
+import SimpleEncoder from '../utils/SimpleEncoder.js';
 
 export default {
   name: 'VerticalLineBar',

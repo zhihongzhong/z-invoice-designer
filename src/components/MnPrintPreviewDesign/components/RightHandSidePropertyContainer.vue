@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import { setStyles } from '../utils/CSSUtils'
+  import { setStyles } from '../utils/CSSUtils.js';
   import Selector from './Selector.vue';
 
   export default {

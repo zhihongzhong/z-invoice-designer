@@ -1,6 +1,6 @@
-import './DynamicComponent.less'
-import { array2object, style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil'
-import { rectIn } from '../../MnPrintPreviewDesign/utils/GraphicUtils'
+import './DynamicComponent.less';
+import { array2object, style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
+import { rectIn } from '../../MnPrintPreviewDesign/utils/GraphicUtils.js';
 
 export default {
   name: 'DynamicComponent',
@@ -14,17 +14,16 @@ export default {
       type: Array,
       default: ()=> []
     },
+    dataSource: {
+      type: Object,
+      default: ()=> ({})
+    }
   },
   data() {
     return {
       showBorder: false,
       isMouseDown: false,
       transform: '',
-    }
-  },
-  inject: {
-    dataSource: {
-      default: null
     }
   },
   methods: {
@@ -34,13 +33,27 @@ export default {
     getValue() {
       const value = this.attributes.filter(attr=>attr.name === 'value')[0].value;
       const regExp = /{{(.*?)}}/;
+      let actualValue;
+      
       if(regExp.test(value)) {
-        const actualValue = regExp.exec(value)[1];
-        return this.dataSource[actualValue];
+        actualValue = regExp.exec(value)[1];
+        actualValue = this.dataSource[actualValue];
+      } else {
+        actualValue = value;
       }
-      return value;
+      return this.getPrefix() + actualValue + this.getSuffix();
     },
     
+    getPrefix() {
+      const prefix = this.attributes.filter(attr=>attr.name === 'prefix');
+      if(prefix.length > 0) return prefix[0].value;
+      return '';
+    },
+    getSuffix() {
+      const suffix = this.attributes.filter(attr=>attr.name === 'suffix');
+      if(suffix.length > 0) return suffix[0].value;
+      return '';
+    },
     in(xPos, yPos) {
       if(!this.$refs.root) return false;
       const {left, top, width, height } = this.$refs.root.getBoundingClientRect();

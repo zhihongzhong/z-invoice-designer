@@ -1,7 +1,7 @@
-import './DynamicComponent.less'
-import { array2object, style2object } from '../utils/ComponentUtil'
-import { rectIn } from '../utils/GraphicUtils'
-import DraggableMixin from '../mixins/DraggableMixin'
+import './DynamicComponent.less';
+import { array2object, style2object } from '../utils/ComponentUtil.js';
+import { rectIn } from '../utils/GraphicUtils.js';
+import DraggableMixin from '../mixins/DraggableMixin.js';
 
 export default {
   name: 'DynamicComponent',
@@ -32,9 +32,19 @@ export default {
       this.$emit('click');
     },
     getValue() {
-      return this.attributes.filter(attr=>attr.name === 'value')[0].value;
+      const value = this.attributes.filter(attr=>attr.name === 'value')[0].value;
+      return this.getPrefix() + value + this.getSuffix();
     },
-    
+    getPrefix() {
+      const prefix = this.attributes.filter(attr=>attr.name === 'prefix');
+      if(prefix.length > 0) return prefix[0].value;
+      return '';
+    },
+    getSuffix() {
+      const suffix = this.attributes.filter(attr=>attr.name === 'suffix');
+      if(suffix.length > 0) return suffix[0].value;
+      return '';
+    },
     in(xPos, yPos) {
       if(!this.$refs.root) return false;
       const {left, top, width, height } = this.$refs.root.getBoundingClientRect();

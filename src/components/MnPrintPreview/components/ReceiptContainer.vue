@@ -9,6 +9,7 @@
         :tag-name="child.tagName"
         :styles="child.styles"
         :attributes="child.attributes"
+        :data-source="dataSource"
       />
       <div>
         <receipt-line
@@ -24,9 +25,9 @@
 </template>
 
 <script>
-  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil'
-  import LabelComponent from './LabelComponent';
-  import CustomLine from './CustomLine';
+  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
+  import LabelComponent from './LabelComponent.js';
+  import CustomLine from './CustomLine.js';
 
   export default {
     name: "ReceiptContainer",
@@ -39,6 +40,10 @@
           attributes: [],
           childrenData: []
         })
+      },
+      dataSource: {
+        type: Object,
+        default: ()=> ({})
       }
     },
     components: {

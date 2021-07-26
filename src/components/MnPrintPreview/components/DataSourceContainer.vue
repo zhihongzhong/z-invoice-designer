@@ -2,7 +2,7 @@
   <div
     class="data-source-container-root"
     :style="style">
-    <table-component :columns="columns" :data-binding="dataBinding"/>
+    <table-component :columns="columns" :data-binding="dataBinding" :data-source="dataSource"/>
   </div>
 </template>
 
@@ -12,9 +12,9 @@
   // title: String
   // dataIndex: String
   // authority: String
-  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil';
-  import TableComponent from './TableComponent';
-  import { copyObj } from '../../MnPrintPreviewDesign/utils/ObjectUtil';
+  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
+  import TableComponent from './TableComponent.js';
+  import { copyObj } from '../../MnPrintPreviewDesign/utils/ObjectUtil.js';
 
   export default {
     name: "DataSourceContainer",
@@ -34,6 +34,10 @@
           attributes: [],
           childrenData: []
         })
+      },
+      dataSource: {
+        type: Object,
+        default: ()=> ({})
       }
     },
 

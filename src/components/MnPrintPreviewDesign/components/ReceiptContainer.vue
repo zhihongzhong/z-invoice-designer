@@ -34,10 +34,10 @@
 </template>
 
 <script>
-  import ContainerMixin from '../mixins/ContainerMixin';
-  import { createDefaultContainerStyle, style2object } from '../utils/ComponentUtil'
-  import LabelComponent from './LabelComponent';
-  import CustomLine from './CustomLine';
+  import ContainerMixin from '../mixins/ContainerMixin.js';
+  import { createDefaultContainerStyle, style2object } from '../utils/ComponentUtil.js';
+  import LabelComponent from './LabelComponent.js';
+  import CustomLine from './CustomLine.js';
 
   export default {
     name: "ReceiptContainer",

@@ -12,6 +12,7 @@
             :tag-name="child.tagName"
             :styles="child.styles"
             :attributes="child.attributes"
+            :data-source="dataSource"
           />
       </div>
     </div>
@@ -19,10 +20,10 @@
 </template>
 
 <script>
-  import DynamicComponent from './DynamicComponent';
-  import { copyObj } from '../../MnPrintPreviewDesign/utils/ObjectUtil';
-  import SimpleEncoder from '../../MnPrintPreviewDesign/utils/SimpleEncoder'
-  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil'
+  import DynamicComponent from './DynamicComponent.js';
+  import { copyObj } from '../../MnPrintPreviewDesign/utils/ObjectUtil.js';
+  import SimpleEncoder from '../../MnPrintPreviewDesign/utils/SimpleEncoder.js';
+  import { style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
 
   export default {
     name: "TitleContainer",
@@ -40,6 +41,10 @@
           childrenData: [],
           lineData: []
         })
+      },
+      dataSource: {
+        type: Object,
+        default: ()=> ({})
       }
     },
 
@@ -52,11 +57,6 @@
       },
       attributes: function() {
         return this.fields.attributes;
-      }
-    },
-    inject: {
-      dataSource: {
-        default: {}
       }
     },
     methods: {

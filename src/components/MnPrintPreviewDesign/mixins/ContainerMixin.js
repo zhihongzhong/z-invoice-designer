@@ -1,5 +1,5 @@
-import SimpleEncoder from '../utils/SimpleEncoder';
-import { rectIn } from '../utils/GraphicUtils';
+import SimpleEncoder from '../utils/SimpleEncoder.js';
+import { rectIn } from '../utils/GraphicUtils.js';
 
 export default {
   

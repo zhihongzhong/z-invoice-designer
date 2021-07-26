@@ -21,11 +21,11 @@
 <script>
   import TitleContainer from './TitleContainer.vue';
   import ReceiptContainer from './ReceiptContainer.vue';
-  import HorizontalLineBar from './HorizontalLineBar';
+  import HorizontalLineBar from './HorizontalLineBar.js';
   import VerticalLineBar from './VerticalLineBar.js';
-  // import DataBindingModal from './DataBindingModal.vue';
+  import DataBindingModal from './DataBindingModal.vue';
   import DataSourceContainer from './DataSourceContainer.vue';
-  import SimpleEncoder from '../utils/SimpleEncoder';
+  import SimpleEncoder from '../utils/SimpleEncoder.js';
   export default {
     name: "Paper",
     props: {

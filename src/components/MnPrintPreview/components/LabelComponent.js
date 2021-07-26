@@ -1,4 +1,4 @@
-import { array2object, style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil'
+import { array2object, style2object } from '../../MnPrintPreviewDesign/utils/ComponentUtil.js';
 import './LabelComponent.less';
 
 export default {
@@ -14,10 +14,9 @@ export default {
       type: Array,
       default: ()=> []
     },
-  },
-  inject: {
     dataSource: {
-      default: {}
+      type: Object,
+      default: ()=> ({})
     }
   },
   methods: {
